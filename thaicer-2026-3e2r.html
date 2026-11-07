@@ -75,6 +75,22 @@ a:focus-visible { outline:3px solid #f6d376; outline-offset:4px; }
 .action { font-size:16px; }
 @media(max-width:700px){.title{font-size:22px;line-height:1.65}}
 
+
+/* Research results and methodology from the supplied ThaiCER abstract */
+.research-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:22px 0 0}
+.research-stat{background:#18354a;border:1px solid #386071;border-radius:14px;padding:17px 19px}
+.research-stat strong{display:block;font:600 29px/1.4 'Kanit','Noto Sans Thai',sans-serif;color:#f3ce82}
+.research-stat span{font-size:14px;line-height:1.7;color:#d8e6ed}
+.research-list{padding-left:27px;margin:15px 0 0}.research-list li{margin:8px 0;padding-left:4px}
+.research-panel p{line-height:1.95}
+.research-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 20px}
+.research-step{border:1px solid #33576c;background:#18354a;border-radius:12px;padding:17px 12px}
+.research-step b{display:block;color:#b7f1d3;font:700 14px/1.6 'DM Sans',sans-serif}
+.research-step span{display:block;font-size:14px;line-height:1.75;margin-top:5px}
+.research-note{color:#d4e3ea;font-size:14px;border-left:3px solid #e8bd77;padding-left:14px}
+@media(max-width:850px){.research-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.research-meta{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.research-meta{grid-template-columns:1fr}.research-steps{grid-template-columns:1fr 1fr}.research-stat strong{font-size:26px}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -108,6 +124,37 @@ a:focus-visible { outline:3px solid #f6d376; outline-offset:4px; }
 <dt>หลักฐาน</dt><dd>เกียรติบัตร ThaiCER 2026 ที่ระบุชื่อบทความวิจัย ผู้วิจัย และการได้รับคัดเลือกให้นำเสนอ</dd>
 </dl>
 </section>
+
+<!-- Research abstract and results from ThaiCER 2026, p. 510 -->
+<section class="panel research-panel" aria-labelledby="abstract-title">
+ <div class="label">THAICER 2026 · RESEARCH ABSTRACT · หน้า 510</div>
+ <h2 id="abstract-title" class="title">บทคัดย่องานวิจัยและผลการศึกษา</h2>
+ <p>การวิจัยนี้มีวัตถุประสงค์เพื่อ <strong>1) พัฒนารูปแบบการจัดการเรียนรู้ 3E2R</strong> และ <strong>2) ประเมินประสิทธิผลของรูปแบบ</strong> ในการส่งเสริมทักษะการคิดเชิงผู้ประกอบการของนักเรียนชั้นมัธยมศึกษาปีที่ 5 โดยใช้ระเบียบวิธีวิจัยและพัฒนา บูรณาการทฤษฎีการสร้างความรู้ด้วยตนเอง การเรียนรู้ผ่านประสบการณ์ และแนวคิดการสะท้อนคิด</p>
+ <div class="research-meta" aria-label="ข้อมูลสำคัญของงานวิจัย">
+  <div class="research-stat"><strong>35 คน</strong><span>กลุ่มตัวอย่างนักเรียน ม.5 โรงเรียนเซนต์เทเรซา สุ่มแบบแบ่งชั้น</span></div>
+  <div class="research-stat"><strong>4.76</strong><span>คะแนนเฉลี่ยความเหมาะสมจากผู้เชี่ยวชาญ (S.D. = 0.43) ระดับมากที่สุด</span></div>
+  <div class="research-stat"><strong>.05</strong><span>ระดับนัยสำคัญทางสถิติที่พบว่าคะแนนหลังเรียนสูงกว่าก่อนเรียน</span></div>
+ </div>
+ <h2>รูปแบบการจัดการเรียนรู้ 3E2R</h2>
+ <p>รูปแบบมีโครงสร้าง <strong>5 ขั้นตอนเชิงเกลียวสว่าน</strong> ดังนี้</p>
+ <div class="research-steps" aria-label="ห้าขั้นตอนของรูปแบบ 3E2R">
+  <div class="research-step"><b>1. Engagement</b><span>การสร้างการมีส่วนร่วม</span></div>
+  <div class="research-step"><b>2. Experience</b><span>การสร้างประสบการณ์ผ่านการปฏิบัติ</span></div>
+  <div class="research-step"><b>3. Evaluation</b><span>การประเมินเพื่อพัฒนา</span></div>
+  <div class="research-step"><b>4. Reflection</b><span>การสะท้อนคิดเชิงวิพากษ์</span></div>
+  <div class="research-step"><b>5. Review</b><span>การทบทวนและต่อยอด</span></div>
+ </div>
+ <h2>วิธีวิจัยและเครื่องมือ</h2>
+ <p>ใช้แผนการจัดการเรียนรู้แบบบูรณาการข้ามศาสตร์ 8 แผน แบบประเมินทักษะการคิดเชิงผู้ประกอบการ 30 ข้อ แบบประเมินตามสภาพจริง และแฟ้มสะสมผลงาน วิเคราะห์ข้อมูลด้วยค่าเฉลี่ย ส่วนเบี่ยงเบนมาตรฐาน การทดสอบค่าทีแบบไม่เป็นอิสระต่อกัน และการวิเคราะห์เนื้อหา</p>
+ <h2>ผลการวิจัยที่สำคัญ</h2>
+ <ul class="research-list">
+  <li>รูปแบบ 3E2R ได้รับการประเมินความเหมาะสมจากผู้เชี่ยวชาญในระดับ <strong>มากที่สุด (ค่าเฉลี่ย 4.76, S.D. = 0.43)</strong></li>
+  <li>นักเรียนมีคะแนนทักษะการคิดเชิงผู้ประกอบการหลังเรียนสูงกว่าก่อนเรียนอย่างมีนัยสำคัญทางสถิติที่ระดับ <strong>.05</strong></li>
+  <li>พบพัฒนาการเชิงบวกใน 5 ด้าน ได้แก่ การคิดเชิงนวัตกรรม การคิดเชิงระบบ การจัดการความเสี่ยง ความเข้าอกเข้าใจผู้อื่น และการคิดมุ่งอนาคต</li>
+ </ul>
+ <p class="research-note">ที่มา: ภาพหน้าบทคัดย่องานวิจัย ThaiCER 2026 หน้า 510 ซึ่งเจ้าของเว็บไซต์จัดเตรียมให้ ข้อมูลดังกล่าวเป็นผลที่ผู้วิจัยรายงานในบทคัดย่อ ไม่ได้เพิ่มตัวเลขคะแนนหรือข้อสรุปอื่นนอกเหนือจากเอกสาร และยังไม่ได้แนบไฟล์ภาพต้นฉบับในหน้านี้</p>
+</section>
+
 <div class="grid">
 <section class="panel">
 <h2>ความสำคัญของผลงาน</h2>
@@ -118,9 +165,9 @@ a:focus-visible { outline:3px solid #f6d376; outline-offset:4px; }
 <section class="panel en" lang="en">
 <h2>English summary</h2>
 <p><strong>Selected for presentation at ThaiCER 2026</strong></p>
-<p>Research title: Development of a 3E2R Learning Management Model to Promote Entrepreneurial Thinking Skills among Grade 11 Students.</p>
+<p>Research title: Development of the 3E2R Learning Management Model to Enhance Entrepreneurial Thinking Skills of Grade 11 Students.</p>
 <p>Researchers: Theerawat Thungkham, Kanjaporn Saekhow, and Suthep Sukchan.</p>
-<p>Conference: Thailand International Conference on Education Research 2026, 6–7 August 2026, Asawin Grand Convention Hotel, Bangkok.</p>
+<p>Conference: Thailand International Conference on Education Research 2026, 6–7 August 2026, Asawin Grand Convention Hotel, Bangkok. An abstract appears on page 510 of the provided ThaiCER 2026 document. The study involved 35 Grade 11 students; expert suitability rating was 4.76 (SD 0.43), and post-intervention entrepreneurial-thinking scores were significantly higher at the .05 level.</p>
 <p class="small">English transliterations are provided for accessibility; the Thai names and title on the certificate are authoritative.</p>
 </section>
 </div>
