@@ -155,5 +155,33 @@
       link.addEventListener("focus", () => prefetchOnIntent(link), { once: true });
     });
 
+  // Subtle, pointer-only portrait tilt. Disabled for reduced motion.
+  const heroFrame = document.querySelector(".hero--enhanced .hero-photo-frame");
+  const heroArt = document.querySelector(".hero--enhanced .hero-art-photo");
+  if (heroFrame && heroArt && window.matchMedia("(hover: hover) and (pointer: fine)").matches
+      && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    let raf = 0;
+    let nextX = 0, nextY = 0;
+    heroArt.addEventListener("pointermove", event => {
+      const bounds = heroFrame.getBoundingClientRect();
+      const px = (event.clientX - (bounds.left + bounds.width / 2)) / (bounds.width / 2);
+      const py = (event.clientY - (bounds.top + bounds.height / 2)) / (bounds.height / 2);
+      nextX = Math.max(-3.5, Math.min(3.5, -py * 3.5));
+      nextY = Math.max(-3.5, Math.min(3.5, px * 3.5));
+      if (raf) return;
+      raf = window.requestAnimationFrame(() => {
+        heroFrame.style.setProperty("--tilt-x", nextX.toFixed(2) + "deg");
+        heroFrame.style.setProperty("--tilt-y", nextY.toFixed(2) + "deg");
+        raf = 0;
+      });
+    }, { passive: true });
+    heroArt.addEventListener("pointerleave", () => {
+      if (raf) window.cancelAnimationFrame(raf);
+      raf = 0;
+      heroFrame.style.removeProperty("--tilt-x");
+      heroFrame.style.removeProperty("--tilt-y");
+    });
+  }
+
   if (year) year.textContent = String(new Date().getFullYear());
 })();
