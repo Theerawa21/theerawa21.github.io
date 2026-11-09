@@ -496,3 +496,38 @@ html { scroll-behavior: auto !important; }
 .impact-teaser>a:hover{filter:brightness(1.1)}
 @media(max-width:780px){.impact-teaser{display:block}.impact-teaser>a{margin-top:15px}}
 @media(max-width:590px){.home-impact-link{flex-direction:column;align-items:flex-start;padding:19px;gap:12px}.home-impact-link b{font-size:14px}.impact-teaser{padding:19px;margin-top:18px}}
+
+
+/* IGNITE award banner — 2026-11-09 */
+.home-news-banner {
+ display:grid;grid-template-columns:minmax(155px,225px) minmax(0,1fr) auto;
+ gap:20px;align-items:center;margin:22px 0 10px;
+ padding:13px 24px 13px 13px;border-radius:16px;
+ border:1px solid var(--line);background:var(--paper);
+ color:var(--text);text-decoration:none;
+ transition:border-color .16s ease,background-color .16s ease;
+}
+.home-news-banner:hover,.home-news-banner:focus-visible {
+ border-color:var(--teal);background:var(--soft);
+}
+.home-news-banner img {
+ display:block;width:100%;height:auto;aspect-ratio:4/3;
+ object-fit:cover;border-radius:10px;background:var(--soft);
+}
+.home-news-copy {display:flex;flex-direction:column;gap:5px;min-width:0;}
+.home-news-copy small {font:700 11px/1.7 var(--font-en);letter-spacing:.05em;color:var(--teal);}
+.home-news-copy strong {font:500 clamp(19px,2vw,25px)/1.55 Kanit,var(--font-th);color:var(--text);}
+.home-news-copy>span {font-size:14px;line-height:1.75;color:var(--muted);}
+.home-news-banner em {font-size:14px;font-style:normal;white-space:nowrap;font-weight:600;color:var(--teal);}
+@media(max-width:850px) {
+ .home-news-banner {grid-template-columns:160px minmax(0,1fr);padding:12px;gap:14px;}
+ .home-news-banner em {grid-column:2;white-space:normal;}
+}
+@media(max-width:530px) {
+ .home-news-banner{grid-template-columns:1fr;padding:12px;gap:12px;}
+ .home-news-banner img{max-height:235px;}
+ .home-news-banner em{grid-column:1;}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-news-banner{transition:none!important;}
+}
