@@ -546,3 +546,53 @@ html { scroll-behavior: auto !important; }
 .home-honors-grid span{color:var(--muted);font-size:14px;line-height:1.75}
 @media(max-width:650px){.home-honors-heading{display:block}.home-honors-heading>a{display:inline-block;margin-top:6px}.home-honors-grid{grid-template-columns:1fr;gap:10px}.home-honors-grid>a{padding:18px}}
 @media(prefers-reduced-motion:reduce){.home-honors-grid>a{transition:none}}
+
+
+/* Profile education, career, and award sections — 2026-11-09 */
+.profile-education,.profile-experience{padding:52px 0 62px;scroll-margin-top:100px}
+.profile-education{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.profile-experience{background:var(--paper)}
+.profile-section-heading{max-width:850px;margin-bottom:25px}
+.profile-section-heading h2{font:500 clamp(28px,3.6vw,41px)/1.5 Kanit,var(--font-th);color:var(--text);margin:10px 0}
+.profile-section-heading p{font-size:17px;line-height:1.9;color:var(--muted);margin:0}
+.education-grid,.profile-career-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.education-card,.profile-career-card{min-width:0;border:1px solid var(--line);border-radius:16px;padding:27px 28px;background:var(--paper)}
+.education-level,.profile-career-card>span{display:block;color:var(--teal);font:700 12px/1.6 var(--font-en);letter-spacing:.06em}
+.education-card h3,.profile-career-card h3{font:500 clamp(21px,2.5vw,28px)/1.5 Kanit,var(--font-th);color:var(--text);margin:12px 0 8px}
+.education-card p,.profile-career-card p{color:var(--muted);line-height:1.8;font-size:16px;margin:3px 0 12px}
+.education-card>strong{display:block;color:var(--text);font-size:17px;line-height:1.75;font-weight:600}
+.education-note{display:block;color:var(--muted);font-size:13px;line-height:1.65;margin-top:10px}
+.education-source{font-size:13px;line-height:1.75;color:var(--muted);margin:18px 0 0}
+.profile-experience .profile-career-card{background:var(--surface)}
+.profile-recognition{margin:22px 0;padding:26px 29px;border-radius:17px;background:linear-gradient(115deg,#0b2236,#174356);border:1px solid #4a7280;display:flex;align-items:center;gap:24px;justify-content:space-between;color:#f2f8f8}
+.profile-recognition h3{font:500 clamp(23px,2.8vw,32px)/1.5 Kanit,var(--font-th);margin:10px 0;color:#fff}
+.profile-recognition p{line-height:1.8;color:#d8e6ed;font-size:16px;max-width:740px;margin:0 0 13px}
+.profile-recognition a{display:inline-flex;align-items:center;gap:8px;text-decoration:underline;text-underline-offset:4px;color:#a6f0d6;font-weight:600;font-size:15px}
+.profile-recognition-symbol{display:flex;flex-direction:column;text-align:center;align-items:center;justify-content:center;gap:3px;flex:none;font:600 35px/1.2 Kanit,var(--font-th);color:#f7d38d;border:1px solid #f7d38d66;border-radius:50%;width:124px;height:124px;background:#f7d38d0e}
+.profile-recognition-symbol small{font:700 10px/1.6 var(--font-en);letter-spacing:.07em}
+.profile-timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:23px 0}
+.profile-timeline>div{padding:20px 23px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.profile-timeline strong{font:600 25px/1.5 Kanit,var(--font-th);color:var(--teal)}
+.profile-timeline p{color:var(--muted);font-size:15px;line-height:1.8;margin:8px 0 0}
+.profile-motto{border-left:4px solid var(--gold);border-radius:0 14px 14px 0;background:var(--soft);padding:21px 26px;margin-top:22px}
+.profile-motto>span{display:block;color:var(--teal);font-size:14px;font-weight:700}
+.profile-motto blockquote{margin:7px 0;color:var(--text);font:500 clamp(22px,2.7vw,29px)/1.5 Kanit,var(--font-th)}
+.profile-motto p{color:var(--muted);font-size:14px;margin:5px 0}
+.profile-home-education{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 21px;margin-top:12px;border:1px solid var(--line);border-radius:13px;background:var(--surface);color:var(--text)}
+.profile-home-education>span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.profile-home-education strong{font:500 18px/1.6 Kanit,var(--font-th);color:var(--text)}
+.profile-home-education small{font-size:14px;line-height:1.75;color:var(--muted)}
+.profile-home-education>a{flex:none;display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;min-height:45px;border-radius:10px;background:var(--soft);border:1px solid var(--line);font-size:14px;font-weight:600;color:var(--teal)}
+.profile-home-education>a:hover{border-color:var(--teal)}
+@media(max-width:860px){.profile-timeline{grid-template-columns:1fr 1fr}.profile-recognition-symbol{width:104px;height:104px;font-size:28px}}
+@media(max-width:650px){
+ .profile-education,.profile-experience{padding:36px 0 45px}
+ .education-grid,.profile-career-grid,.profile-timeline{grid-template-columns:1fr;gap:11px}
+ .education-card,.profile-career-card{padding:21px}
+ .profile-section-heading p{font-size:15px}
+ .profile-recognition{padding:22px;align-items:flex-start;flex-direction:column}
+ .profile-recognition-symbol{width:auto;height:auto;border-radius:12px;padding:9px 15px;font-size:22px;flex-direction:row}
+ .profile-motto{padding:18px 20px}
+ .profile-home-education{flex-direction:column;align-items:stretch;padding:17px}
+ .profile-home-education>a{width:100%}
+}
