@@ -531,3 +531,18 @@ html { scroll-behavior: auto !important; }
 @media(prefers-reduced-motion:reduce){
  .home-news-banner{transition:none!important;}
 }
+
+
+/* Selected honors strip · 2026-11-09 */
+.home-honors{margin:25px 0 5px}
+.home-honors-heading{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin:0 0 13px}
+.home-honors-heading h3{font:500 clamp(20px,2.3vw,27px)/1.5 Kanit,var(--font-th);color:var(--text);margin:0}
+.home-honors-heading>a{color:var(--teal);font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.home-honors-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.home-honors-grid>a{min-width:0;display:flex;flex-direction:column;gap:6px;padding:21px 23px;border-radius:14px;border:1px solid var(--line);background:var(--surface);text-decoration:none;transition:border-color .16s ease,background-color .16s ease}
+.home-honors-grid>a:hover,.home-honors-grid>a:focus-visible{border-color:var(--teal);background:var(--soft)}
+.home-honors-grid small{color:var(--teal);font:700 11px/1.6 var(--font-en);letter-spacing:.03em}
+.home-honors-grid strong{color:var(--text);font:500 clamp(17px,1.9vw,22px)/1.6 Kanit,var(--font-th)}
+.home-honors-grid span{color:var(--muted);font-size:14px;line-height:1.75}
+@media(max-width:650px){.home-honors-heading{display:block}.home-honors-heading>a{display:inline-block;margin-top:6px}.home-honors-grid{grid-template-columns:1fr;gap:10px}.home-honors-grid>a{padding:18px}}
+@media(prefers-reduced-motion:reduce){.home-honors-grid>a{transition:none}}
