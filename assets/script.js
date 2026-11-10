@@ -12,7 +12,7 @@
     "#highlights": ["publications", "#highlights"],
     "#contact": ["contact", ""]
   };
-  if ((lastPath === "" || lastPath === "index.html" || lastPath === "en.html") && oldSectionMap[window.location.hash]) {
+  if ((lastPath === "" || lastPath === "index.html" || lastPath === "en.html") && oldSectionMap[window.location.hash] && !document.getElementById(window.location.hash.slice(1))) {
     const [page, fragment] = oldSectionMap[window.location.hash];
     const target = (lastPath === "en.html" ? "en-" : "") + page + ".html" + fragment;
     window.location.replace(target);
